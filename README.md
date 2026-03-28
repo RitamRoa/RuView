@@ -1,10 +1,19 @@
 # π RuView
 
 <p align="center">
-  <a href="https://ruvnet.github.io/RuView/">
+  <a href="https://x.com/rUv/status/2037556932802761004">
     <img src="assets/ruview-small-gemini.jpg" alt="RuView - WiFi DensePose" width="100%">
   </a>
 </p>
+
+> **Alpha Software** — This project is under active development. APIs, firmware behavior, and documentation may change. Known limitations:
+> - Multi-node person counting may show identical output regardless of the number of people (#249)
+> - Training pipeline on MM-Fi dataset may plateau at low PCK (#318) — hyperparameter tuning in progress
+> - No pre-trained model weights are provided; training from scratch is required
+> - ESP32-C3 and original ESP32 are not supported (single-core, insufficient for CSI DSP)
+> - Single ESP32 deployments have limited spatial resolution
+>
+> Contributions and bug reports welcome at [Issues](https://github.com/ruvnet/RuView/issues).
 
 ## **See through walls with WiFi + Ai** ##
 
@@ -14,7 +23,7 @@
 
 Instead of relying on cameras or cloud models, it observes whatever signals exist in a space such as WiFi, radio waves across the spectrum, motion patterns, vibration, sound, or other sensory inputs and builds an understanding of what is happening locally.
 
-Built on top of [RuVector](https://github.com/ruvnet/ruvector/), the project became widely known for its implementation of WiFi DensePose — a sensing technique first explored in academic research such as Carnegie Mellon University's *DensePose From WiFi* work. That research demonstrated that WiFi signals can be used to reconstruct human pose.
+Built on top of [RuVector](https://github.com/ruvnet/ruvector/) Self Learning Vector Memory system and [Cognitum.One](https://Cognitum.One) , the project became widely known for its implementation of WiFi DensePose — a sensing technique first explored in academic research such as Carnegie Mellon University's *DensePose From WiFi* work. That research demonstrated that WiFi signals can be used to reconstruct human pose.
 
 RuView extends that concept into a practical edge system. By analyzing Channel State Information (CSI) disturbances caused by human movement, RuView reconstructs body position, breathing rate, heart rate, and presence in real time using physics-based signal processing and machine learning.
 
